@@ -16,7 +16,7 @@ def index(request):
 class MenuItemsView(generics.ListCreateAPIView):
     serializer_class = MenuSerializer
     queryset = Menu.objects.all()
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
         menus = self.get_queryset()
@@ -33,7 +33,7 @@ class MenuItemsView(generics.ListCreateAPIView):
 class SingleMenuItemView(generics.RetrieveUpdateAPIView, generics.DestroyAPIView):
     serializer_class = MenuSerializer
     queryset = Menu.objects.all()
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
         menu_item = self.get_object()

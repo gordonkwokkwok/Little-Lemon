@@ -13,6 +13,8 @@ This is a capstone project in Django, specifically building an API for the Littl
 - Set up the table booking API
 - Add the registration page (Djoser)
 - Secure the table booking API
+- Adding unit tests
+- Testing the API using Insomnia
 
 
 # Prerequisite
@@ -26,6 +28,7 @@ Conda (Version: 22.9.0)
 Python (Version: 3.9.6)
 pip (Version: 23.0.1)
 MySQL(Version: 8.0.32 for macos13.0 on x86_64 (Homebrew))
+Insomnia REST
 ```
 
 ## Library / Framework
