@@ -56,10 +56,10 @@ python3 manage.py runserver
 ```
 
 # APIs
-```restaurant/menu```
+## ```restaurant/menu```
 
-Allow all authenticated users to view the menu items
-Only admin user could post new item
+Allow all authenticated users to view the menu items.
+Only admin user could post new item.
 
 Fields needed to post:
 
@@ -69,17 +69,17 @@ Fields needed to post:
 
 >**Inventory**: int
 
-```restaurant/menu/<int:pk>```
+## ```restaurant/menu/<int:pk>```
 
-Allow all authenticated users to view single menu item
+Allow all authenticated users to view single menu item.
 
-Only admin user could update or delete single item
+Only admin user could update or delete single item.
 
-```restaurant/book```
+## ```restaurant/book```
 
-Allow authenticated users to post new booking, please use the same username of the user as the name of booking
+Allow authenticated users to post new booking, please use the same username of the user as the name of booking.
 
-User could obtain all the books that has the same book name with the current username
+User could obtain all the books that has the same book name with the current username.
 
 Fields needed to post:
 
@@ -90,16 +90,17 @@ Fields needed to post:
 >**date**: date, in the form of "YYYY-MM-DD"
 
 >**comment**: (opt.) text
-```restaurant/book/<int:pk>```
+
+## ```restaurant/book/<int:pk>```
 Only admin user could view or delete single book
 
 # Current users
-Superuser/admin:
+##  Superuser/admin:
 
 >**Username**: admin
 >**Password**: 123456
 
-Customer:
+##  Customer:
 
 >**Username**: testinguser1
 >**Password**: lemon@123!
@@ -109,6 +110,6 @@ Customer:
 
 >**Username**: testing1
 >**Password**: fewfewfvrgre435435
-        
+
 # Contributer
 - [Gordon Kwok](https://www.linkedin.com/in/gordonkwokch/)
