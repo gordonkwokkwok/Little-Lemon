@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'restaurant',
     'rest_framework',
+    'rest_framework.authtoken',
+    'djoser',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +136,28 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# rest_framework configuration section
+REST_FRAMEWORK = {
+    # 'DEFAULT_RENDERER_CLASSES': [
+    #     'rest_framework.renderers.JSONRenderer',
+    #     'rest_framework.renderers.BrowsableAPIRenderer',
+    #     'rest_framework_xml.renderers.XMLRenderer',
+    # ],
+    
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ]
+}
+
+# Djoser authentication library
+DJOSER={"USER_ID_FIELD":"username"}
+
+# Below are valid endpoint offered by Djoser
+# http://127.0.0.1:8000/auth/users/
+# http://127.0.0.1:8000/auth/token/login/
+# username: testing1
+# password: fewfewfvrgre435435
+# http://127.0.0.1:8000/auth/token/logout/

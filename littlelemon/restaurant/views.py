@@ -2,8 +2,8 @@ from django.shortcuts import render
 from .models import Menu, Booking
 
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
 from rest_framework import generics
+from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
 from rest_framework import viewsets
 
@@ -55,7 +55,7 @@ class SingleMenuItemView(generics.RetrieveUpdateAPIView, generics.DestroyAPIView
         menu_item.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-class  BookingViewSet(viewsets.ModelViewSet):
+class BookingViewSet(viewsets.ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
     permission_classes = [IsAuthenticated] 
