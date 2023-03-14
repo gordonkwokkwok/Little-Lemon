@@ -158,6 +158,4 @@ DJOSER={"USER_ID_FIELD":"username"}
 # Below are valid endpoint offered by Djoser
 # http://127.0.0.1:8000/auth/users/
 # http://127.0.0.1:8000/auth/token/login/
-# username: testing1
-# password: fewfewfvrgre435435
 # http://127.0.0.1:8000/auth/token/logout/

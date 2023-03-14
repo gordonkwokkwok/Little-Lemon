@@ -11,7 +11,8 @@ This is a capstone project in Django, specifically building an API for the Littl
 - Querying the stored procedures
 - Set up the menu API
 - Set up the table booking API
-- Add the registration page (Djoser)
+- Work with user authentication (remote user, session, token-based)
+- Add the registration, login, logout functionality page (Djoser)
 - Secure the table booking API
 - Adding unit tests
 - Testing the API using Insomnia
@@ -28,7 +29,7 @@ Conda (Version: 22.9.0)
 Python (Version: 3.9.6)
 pip (Version: 23.0.1)
 MySQL(Version: 8.0.32 for macos13.0 on x86_64 (Homebrew))
-Insomnia REST
+Insomnia REST client
 ```
 
 ## Library / Framework
@@ -54,8 +55,60 @@ python3 manage.py createsuperuser (Username: admin, Password: 123456)
 python3 manage.py runserver
 ```
 
-# Reminder
+# APIs
+```restaurant/menu```
 
+Allow all authenticated users to view the menu items
+Only admin user could post new item
 
+Fields needed to post:
+
+>**Title**: str
+
+>**Price**: decimal
+
+>**Inventory**: int
+
+```restaurant/menu/<int:pk>```
+
+Allow all authenticated users to view single menu item
+
+Only admin user could update or delete single item
+
+```restaurant/book```
+
+Allow authenticated users to post new booking, please use the same username of the user as the name of booking
+
+User could obtain all the books that has the same book name with the current username
+
+Fields needed to post:
+
+>**name**: str, the same as username
+
+>**guest_number**: (opt.) int, default = 1
+
+>**date**: date, in the form of "YYYY-MM-DD"
+
+>**comment**: (opt.) text
+```restaurant/book/<int:pk>```
+Only admin user could view or delete single book
+
+# Current users
+Superuser/admin:
+
+>**Username**: admin
+>**Password**: 123456
+
+Customer:
+
+>**Username**: testinguser1
+>**Password**: lemon@123!
+
+>**Username**: testinguser2
+>**Password**: lemon@123!
+
+>**Username**: testing1
+>**Password**: fewfewfvrgre435435
+        
 # Contributer
 - [Gordon Kwok](https://www.linkedin.com/in/gordonkwokch/)
